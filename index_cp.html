@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>Korean Hashtag</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sangki Kim">
+    <meta name="description" content="人気の韓国語インスタグラムタグを集めた情報サイトです。">
+    <meta name="keywords" content="インスタグラム,韓国語タグ,タグ,コリアンタグ,Instagram,Korean,Korean hash tags">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Quicksand">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="cotainer">
+    <div class="header" style="margin:3%;text-align: center!important;">
+    <h1 style="font-size:900%" class="display-4">Instagram Korean tags</h1>
+    </div>
+
+      <div class="sel sel--black-panther" style="
+      width: 90%;
+      font-size: 200%;
+      ">
+        <select name="select-profession" id="select-profession">
+          <option value="no">選択/Select</option>
+          <option value="trend">人気/トレンド</option>
+          <option value="like">いいね</option>
+          <option value="follow">フォロー</option>
+          <option value="developer">ファッション</option>
+          <option value="programmer">ビューティー</option>
+          <option value="designer">食べ物</option>
+          <option value="designer">恋愛</option>
+          <option value="designer">自撮り</option>
+          <option value="designer">旅行</option>
+          <option value="designer">K-POP</option>
+          <option value="designer">動物</option>
+        </select>
+      </div>
+      
+      <hr class="rule">
+      
+     
+      <div class="list-group like" style="width: 90%;margin: 3em 2em;font-size: x-large;">
+        <a href="#" class="list-group-item list-group-item-action title">#좋아요（いいね）</a>
+        <a href="#" class="list-group-item list-group-item-action title">#좋아요반사（いいね返し)</a>
+        <a href="#" class="list-group-item list-group-item-action title">#좋아요그램（いいねグラム）</a>
+        <a href="#" class="list-group-item list-group-item-action title">#좋아요환영（いいね歓迎）</a>
+      </div>
+      <div class="list-group follow" style="width: 90%;margin: 3em 2em;font-size: x-large;">
+        <a href="#" class="list-group-item list-group-item-action title">#팔로우（フォロー）</a>
+        <a href="#" class="list-group-item list-group-item-action title">#팔로우백（フォローバック）</a>
+        <a href="#" class="list-group-item list-group-item-action title">#팔로우반사（フォロー返し）</a>
+        <a href="#" class="list-group-item list-group-item-action title">#맞팔（相互フォロー）</a>
+      </div>
+ 
+      <div class="form-group" style="width:90%;margin:auto;margin-top:5%;">
+        <label for="exampleFormControlTextarea1" class="title">選択タグ</label>
+        <textarea class="form-control title" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div style="display: flex;margin:auto;width:90%; justify-content: flex-end;margin-top:1%;">
+        <button type="button" class="btn btn-primary btn-lg" style="margin-right:1%;">コピー</button>
+        <button type="button" class="btn btn-danger btn-lg">クリア</button>
+    </div>
+    </div>
+</body>
+<script>/* ===== Logic for creating fake Select Boxes ===== */
+  $('.sel').each(function() {
+    $(this).children('select').css('display', 'none');
+    
+    var $current = $(this);
+    
+    $(this).find('option').each(function(i) {
+      if (i == 0) {
+        $current.prepend($('<div>', {
+          class: $current.attr('class').replace(/sel/g, 'sel__box')
+        }));
+        
+        var placeholder = $(this).text();
+
+        $current.prepend($('<span>', {
+          class: $current.attr('class').replace(/sel/g, 'sel__placeholder'),
+          text: placeholder,
+          'data-placeholder': placeholder
+        }));
+        
+        return;
+      }
+      
+      var value = $(this).val();
+
+      $current.children('div').append($('<span>', {
+        class: $current.attr('class').replace(/sel/g, 'sel__box__options'),
+        name : value,
+        text: $(this).text()
+      }));
+    });
+  });
+  
+  // Toggling the `.active` state on the `.sel`.
+  $('.sel').click(function() {
+    $(this).toggleClass('active');
+  });
+  
+  // Toggling the `.selected` state on the options.
+  $('.sel__box__options').click(function() {
+    var txt = $(this).text();
+    var index = $(this).index();
+    var name = $(this).attr("name");
+    
+    $(this).siblings('.sel__box__options').removeClass('selected');
+    $(this).addClass('selected');
+    
+    var $currentSel = $(this).closest('.sel');
+    $currentSel.children('.sel__placeholder').text(txt);
+    $currentSel.children('select').prop('selectedIndex', index + 1);
+
+    console.log("tt");
+    var className = "." + name;
+    console.log(className);
+    $(".list-group").hide();
+    $(className).show();
+
+  });
+  
+  function changeSelect(){
+    console.log("tt");
+    var value = $(event.currentTarget).val();
+    var className = "." + value;
+    $(".list-group").hide();
+    $(className).show();
+    };
+
+  
+  </script>
+</html>
