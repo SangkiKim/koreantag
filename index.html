@@ -1,0 +1,974 @@
+<html>
+
+<head>
+  <title>Korean Hashtag</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sangki Kim">
+  <meta name="description" content="人気の韓国語インスタグラムタグを集めた情報サイトです。">
+  <meta name="keywords" content="インスタグラム,韓国語タグ,タグ,コリアンタグ,Instagram,Korean,Korean hash tags">
+  <link href="https://fonts.googleapis.com/css?family=Cherry+Swash:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Quicksand">
+  <link href="css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="js/clipboard.min.js"></script>
+  <script defer src="js/all.js"></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ead11ef2a3ebd6f"></script>
+</head>
+
+
+<body>
+  <div class="container-fluid">
+
+    <!-- Section -->
+    <section>
+
+      <style>
+        .md-pills .nav-link.active {
+          color: #fff;
+          background-color: #616161;
+        }
+
+        button.close {
+          position: absolute;
+          right: 0;
+          z-index: 2;
+          padding-right: 1rem;
+          padding-top: .6rem;
+        }
+
+        .card-img-top {
+          /* height: 20vw; */
+          opacity: 0.3;
+        }
+
+        .box {
+          position: relative;
+        }
+
+        /* 大デバイス（デスクトップ, 1200px 未満） */
+        @media (min-width: 992px) {
+          .text {
+            font-size: 7.0rem;
+          }
+
+          .card-text {
+            top: calc(50% - 7.0rem);
+            font-size: 7.0rem;
+          }
+
+          .tag_text {
+            font-size: 7.0rem;
+          }
+
+          .hiragana {
+            font-size: 3.0rem;
+          }
+
+          .tooltip-inner {
+            font-size: 2.0rem;
+          }
+
+          .all {
+            width: 4.4rem;
+          }
+        }
+
+        /* 中デバイス（タブレット, 992px 未満） */
+        @media (max-width: 991.98px) {
+          .text {
+            font-size: 6.0rem;
+          }
+
+          .card-text {
+            top: calc(50% - 4.4rem);
+            font-size: 4.4rem;
+          }
+
+          .tag_text {
+            font-size: 3.0rem;
+          }
+
+          .hiragana {
+            font-size: 2.0rem;
+          }
+
+          .tooltip-inner {
+            font-size: 1.5rem;
+          }
+
+          .all {
+            width: 3.4rem;
+          }
+
+          .li_text {
+            font-size: 2.0rem;
+          }
+
+        }
+
+        /* 小デバイス（横向きモバイル, 768px 未満） */
+        @media (max-width: 767.98px) {
+          .text {
+            font-size: 5.0rem;
+          }
+
+          .card-text {
+            top: calc(50% - 3.0rem);
+            font-size: 3.0rem;
+          }
+
+          .tag_text {
+            font-size: 2.6rem;
+          }
+
+          .hiragana {
+            font-size: 1.6rem;
+          }
+
+          .tooltip-inner {
+            font-size: 1.0rem;
+          }
+
+          .all {
+            width: 3.0rem;
+          }
+        }
+
+        /* 極小デバイス（縦向きモバイル, 576px 未満） */
+        @media (max-width: 575.98px) {
+          .text {
+            font-size: 4.0rem;
+          }
+
+          .card-text {
+            top: calc(50% - 2.0rem);
+            font-size: 2.0rem;
+          }
+
+          .tag_text {
+            font-size: 2.3rem;
+          }
+
+          .hiragana {
+            font-size: 1.3rem;
+          }
+
+          .all {
+            width: 2.7rem;
+          }
+        }
+
+        .text {
+          font-family: 'Montserrat', sans-serif;
+          margin-top: 5%;
+        }
+
+        .li_text {
+          font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+        }
+
+        .box div.card-text {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          font-weight: bold;
+          /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+          font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+          text-align: center;
+          color: black;
+
+        }
+
+        .tag-cart {
+          position: sticky;
+          float: right;
+          bottom: 1%;
+        }
+
+        .all {
+          /* border: solid 3px; */
+          /*線*/
+          border-radius: 10px;
+          /*角の丸み*/
+          font-weight: bold;
+          margin-top: 1%;
+          background: #FFF;
+          text-align: center;
+        }
+
+        ul.hira_ul,
+        ol {
+          background: #fcfcfc;
+          /*背景色*/
+          /* padding: 0.5em 0.5em 0.5em 2em; */
+          /*ボックス内の余白*/
+          /* border: solid 3px gray; */
+          /*線の種類 太さ 色*/
+          /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+        }
+
+        ul li.hira_li,
+        ol li {
+          line-height: 1.5;
+          /*文の行高*/
+          /* padding: 0.5em 0; */
+          /*前後の文との余白*/
+        }
+
+        .col-md-6 {
+          padding-left: 3%;
+        }
+
+        .list-group-item {
+          border-top: 0;
+         
+          border-left: 0;
+          border-bottom: solid 1px;
+          border-right: 0;
+          padding-bottom: 0px
+        }
+      </style>
+
+      <!-- Tag List Modal -->
+      <div class="modal modal-tag fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" style="max-width:90vw;" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <!-- <div style="
+        text-align: center;
+        background: black;
+        color: white;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 5000;
+        width: 85vw;
+        display: none;
+        " class="add-notify tag_text">追加しました</div> -->
+              <!-- <div class="list-group like" style="font-size: x-large;">
+              </div> -->
+              <ul class="nav nav-tabs hira-tab">
+              </ul>
+              <div class="all-list">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- Cart List Modal -->
+    <div class="modal modal-cart fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+     <div class="modal-dialog" style="max-width:90vw;" role="document">
+       <div class="modal-content">
+         <div class="modal-body">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+           <div class="form-group cart">
+             <textarea class="form-control tag_text" id="selected_tags" rows="8"></textarea>
+           </div>
+           <div class="cart_btn cart" style="display:none;float:right;">
+             <button type="button" class="btn btn-success btn-lg cart_copy tag_text"
+               data-clipboard-target="#selected_tags">コピー</button>
+             <button type="button" class="btn btn-danger btn-lg cart_clear tag_text">クリア</button>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+      <!-- <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">portfolio</h6> -->
+      <h3 class="text text-center dark-grey-text pb-2">Korean tags</h3>
+      <hr class="w-header my-4">
+      <!-- <p class="text lead text-center text-muted pt-2 mb-5">You can find several korean tags in this section.</p> -->
+
+      <!--First row-->
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <!-- Card -->
+          <a class="card hoverable mb-4" data-content="like">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/like_love_1.jpg">
+              <div class="card-text">いいね</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <a class="card hoverable mb-4" data-content="follow">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/follow_1.jpg">
+              <div class="card-text">フォロー</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!--Second row-->
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <!-- Card -->
+          <a class="card hoverable mb-4" data-content="fashion">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/fashion_1.jpg">
+              <div class="card-text">ファッション</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <a class="card hoverable mb-4" data-content="beauty">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/beauty_1.jpg">
+              <div class="card-text">ビューティー</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!--Third row-->
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <!-- Card -->
+          <a class="card hoverable mb-4" data-content="food">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/food_1.jpg">
+              <div class="card-text">食べ物</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <a class="card hoverable mb-4" data-content="trip">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/trip_1.jpg">
+              <div class="card-text">旅行</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!--Fourth row-->
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <!-- Card -->
+          <a class="card hoverable mb-4" data-content="love">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/love_1.jpg">
+              <div class="card-text">恋愛</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <a class="card hoverable mb-4" data-content="kpop">
+            <div class="box">
+              <!-- Card image -->
+              <img class="card-img-top" src="img/kpop_1.jpg">
+              <div class="card-text">K-POP</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="tag-cart">
+        <div style="
+          height:50px;
+         width:50px;
+         border-radius:50%;
+         line-height:50px;
+         text-align:center;
+         background:pink;
+         position: absolute;
+         margin-left: 80%;
+         font-size: x-large;"><span class="cart_num">0</span></div>
+        <i class="fas fa-shopping-cart fa-7x"></i>
+      </div>
+      <div style="font-size:2.0rem;margin-left:2.5%;">追加要望&問い合わせ /Contact me : <a href="mailto:goodki283@gmail.com">goodki283@gmail.com</a></div>
+  </div>
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+  <div class="addthis_inline_share_toolbox" style="width:100%;margin-left:3%;"></div>
+
+</body>
+<script>
+
+  // いいね
+  var likeArray = {
+    "あ":[
+          {korean : "좋아요" , japanese : "いいね"},
+          {korean : "좋아요반사" , japanese : "いいね返し"},
+          {korean : "좋아요그램", japanese : "いいねグラム"},
+          {korean : "좋아요맞팔", japanese : "いいね押すとフォロー"},
+          {korean : "좋아요늘리기", japanese : "いいね増やす"},
+          {korean : "좋아요환영", japanese : "いいね歓迎"},
+          {korean : "좋아요테러", japanese : "いいねテロ"},
+          {korean : "좋아요테러반사", japanese : "いいねテロ反射"},
+          {korean : "좋아요_한국", japanese : "いいね_韓国"},
+          {korean : "좋아요_일본", japanese : "いいね_日本"},
+          {korean : "좋반" , japanese : "いいね押すと返す" },
+          {korean : "좋튀" , japanese : "いいね押して逃げる" },
+          {korean : "좋아요꾸욱" , japanese : "いいねぎゅっと" }
+        ],
+     "か":[
+          {korean : "소통" , japanese : "コミュニケーション"},
+          {korean : "소통환영" , japanese : "コミュニケーション歓迎"},
+          {korean : "소통해요" , japanese : "コミュニケーションしよう"}
+        ],
+     "な":[
+          {korean : "일상" , japanese : "日常"}
+        ]
+  }
+
+  // フォロー
+  var followArray = {
+    "さ":[
+          {korean : "맞팔" , japanese : "相互フォロー"},
+          {korean : "맞팔환영" , japanese : "相互フォロー歓迎"},
+          {korean : "맞팔해요", japanese : "相互フォローしよう"},
+          {korean : "맞팔댓글", japanese : "相互フォローコメント"},
+          {korean : "맞팔100", japanese : "相互フォロー100"},
+          {korean : "맞팔그램", japanese : "相互フォローグラム"},
+          {korean : "맞팔해", japanese : "相互フォローしよ"},
+          {korean : "맞팔해용", japanese : "相互フォローしようよ"},
+          {korean : "맞팔해요우리", japanese : "相互フォローしよう私たち"},
+          {korean : "맞팔100", japanese : "相互フォロー100"},
+          {korean : "맞팔선팔", japanese : "相互フォロー先フォロー"},
+          {korean : "맞팔좋아요", japanese : "相互フォローいいね"},
+          {korean : "맞팔반사", japanese : "相互フォロー反射"},
+          {korean : "맞팔대환영" , japanese : "相互フォロー大歓迎"},
+          {korean : "맞팔소통" , japanese : "相互フォローコミュニケーション"}
+        ],
+     "は":[
+          {korean : "팔로우" , japanese : "フォロー"},
+          {korean : "팔로우해요" , japanese : "フォローしよう"},
+          {korean : "팔로우환영" , japanese : "フォロー歓迎"},
+          {korean : "팔로우백" , japanese : "フォローバック"},
+          {korean : "팔로우미" , japanese : "フォローミー"},
+          {korean : "팔로어" , japanese : "フォロワー"},
+          {korean : "팔로잉" , japanese : "フォローイング"},
+          {korean : "선팔하면맞팔" , japanese : "フォロー返します"},
+          {korean : "팔로잉" , japanese : "フォローイング"}
+        ]   
+
+  }
+
+    // ファッション
+    var fashionwArray = {
+    "か":[
+          {korean : "코디" , japanese : "コーデ"},
+          {korean : "코디스타그램" , japanese : "コーデスタグラム"},
+          {korean : "코디샷", japanese : "コーデショット"},
+          {korean : "코디추천", japanese : "コーデおすすめ"},
+          {korean : "코디북", japanese : "コーデブック"},
+          {korean : "코디그램", japanese : "コーデグラム"},
+          {korean : "코디세트", japanese : "コーデセット"},
+          {korean : "코디룩추천", japanese : "コーデルックおすすめ"},
+          {korean : "오늘의코디", japanese : "今日のコーデ"},
+          {korean : "오오티디", japanese : "今日のコーデ(ootd,outfit of the day)"},          
+          {korean : "학생코디", japanese : "学生コーデ"},
+          {korean : "연예인패션", japanese : "芸能人ファッション"},
+        ],
+     "た":[
+          {korean : "남자코디" , japanese : "男子コーデ"},
+          {korean : "남자옷" , japanese : "男子服"},
+          {korean : "남자옷코디" , japanese : "男子服コーデ"},
+          {korean : "남자데일리룩" , japanese : "男子デイリールック"},
+          {korean : "남친룩코디" , japanese : "彼氏ルックスコーデ"},
+          {korean : "여친룩코디" , japanese : "彼女ルックスコーデ"},
+          {korean : "남성패션" , japanese : "男性ファッション"},
+          {korean : "남자패션" , japanese : "男子ファッション"},
+          {korean : "데일리룩" , japanese : "デイリールック"},
+          {korean : "데일리코디" , japanese : "デイリーコーデ"},
+          {korean : "데일리룩코디" , japanese : "デイリールックコーデ"},
+          {korean : "데일리패션" , japanese : "デイリーファッション"},
+          {korean : "대학생코디" , japanese : "大学生コーデ"},
+          {korean : "데이트코디" , japanese : "デートコーデ"}
+        ],
+    "さ":[
+          {korean : "여자코디" , japanese : "女子コーデ"},
+          {korean : "여자옷" , japanese : "女子服"},
+          {korean : "여자옷코디" , japanese : "女子服コーデ"},
+          {korean : "여고생코디" , japanese : "女子高生コーデ"},
+          {korean : "여대생코디" , japanese : "女子大学生コーデ"},
+          {korean : "여자데일리룩" , japanese : "女子デイリールック"},
+          {korean : "여성패션" , japanese : "女性ファッション"},
+          {korean : "여자패션" , japanese : "女子ファッション"},
+          {korean : "여자쇼핑몰" , japanese : "女子ショッピングモール"}
+        ],
+    "は":[
+          {korean : "옷" , japanese : "服"},
+          {korean : "옷스타그램" , japanese : "服スタグラム"},
+          {korean : "패션" , japanese : "ファッション"},
+          {korean : "패션스타그램" , japanese : "ファッションスタグラム"},
+          {korean : "패션피플" , japanese : "ファッションピープル"},
+          {korean : "패피" , japanese : "ファッピー(ファッションピープル)"},
+          {korean : "패션코디" , japanese : "ファッションコーデ"},
+          {korean : "패션모델" , japanese : "ファッションモデル"},
+          {korean : "패션그램" , japanese : "ファッショングラム"},
+          {korean : "패션타투" , japanese : "ファッションタトゥー"},
+          {korean : "패션디자인" , japanese : "ファッションデザイン"},
+          {korean : "패션인스타" , japanese : "ファッションインスタ"},
+          {korean : "패션룩" , japanese : "ファッションルック"},
+          {korean : "패션정보" , japanese : "ファッション情報"},
+          {korean : "패션아이템" , japanese : "ファッションアイテム"},
+          {korean : "패션스타일" , japanese : "ファッションスタイル"}
+        ]    
+
+  }
+
+
+// ビューティー
+var beautyArray = {
+  "あ":[
+          {korean : "잇템" , japanese : "Itアイテム"},
+          {korean : "이너뷰티" , japanese : "インナービューティー"}
+        ],
+    "か":[
+          {korean : "화장" , japanese : "化粧"},
+          {korean : "화장품" , japanese : "化粧品"},
+          {korean : "화장품그램", japanese : "化粧品グラム"},
+          {korean : "화장품쇼핑", japanese : "化粧品ショッピング"},
+          {korean : "화장품브랜드", japanese : "化粧品ブランド"},
+          {korean : "화장품도구", japanese : "化粧品道具"},
+          {korean : "화장품추천", japanese : "化粧品おすすめ"},
+          {korean : "화장스타그램", japanese : "化粧品スタグラム"},
+          {korean : "화장법", japanese : "化粧方法"},
+          {korean : "코스메틱", japanese : "コスメティック"},
+          {korean : "코덕", japanese : "コスメティックオタク"},
+          {korean : "k뷰티", japanese : "Kビューティー"},
+        ],
+     "た":[
+          {korean : "데일리화장" , japanese : "デイリー化粧"},
+          {korean : "데일리화장품" , japanese : "デイリー化粧品"},
+          {korean : "데일리메이크업" , japanese : "デイリーメイクアップ"},
+          {korean : "오늘의화장품" , japanese : "今日の化粧品"}
+        ],
+    "さ":[
+          {korean : "인생템" , japanese : "人生アイテム"}
+        ],
+    "は":[
+          {korean : "뷰티" , japanese : "ファッション"},
+          {korean : "뷰티스타그램" , japanese : "ファッションスタグラム"},
+          {korean : "뷰티팁" , japanese : "ファッションピープル"},
+          {korean : "뷰티그램" , japanese : "ファッションコーデ"},
+          {korean : "뷰티모델" , japanese : "ファッションモデル"},
+          {korean : "뷰티템" , japanese : "ファッショングラム"},
+          {korean : "뷰티블로거" , japanese : "ファッションタトゥー"},
+          {korean : "뷰티크리에이터" , japanese : "ファッションデザイン"},
+          {korean : "패션인스타" , japanese : "ファッションインスタ"},
+          {korean : "패션룩" , japanese : "ファッションルック"},
+          {korean : "패션정보" , japanese : "ファッション情報"},
+          {korean : "패션아이템" , japanese : "ファッションアイテム"},
+          {korean : "패션스타일" , japanese : "ファッションスタイル"},
+          {korean : "피부" , japanese : "お肌"},
+          {korean : "피부관리" , japanese : "お肌管理"},
+          {korean : "피부고민" , japanese : "お肌悩み"}
+        ],
+    "ま":[
+          {korean : "메이크업" , japanese : "メイクアップ"},
+          {korean : "메이크" , japanese : "メイク"},
+          {korean : "메이크업스타그램" , japanese : "メイクアップスタグラム"},
+          {korean : "메이크업샷" , japanese : "メイクアップショット"},
+          {korean : "메이크업어플" , japanese : "メイクアップアプリ"}
+        ],
+    "ら":[
+          {korean : "립스틱" , japanese : "リップスティック"},
+          {korean : "립" , japanese : "リップ"},
+          {korean : "립스타그램" , japanese : "リップスタグラム"},
+          {korean : "립스틱추천" , japanese : "リップスティックおすすめ"},
+          {korean : "립추천" , japanese : "リップおすすめ"},
+          {korean : "립메이크업" , japanese : "リップメイクアップ"},
+          {korean : "립덕후" , japanese : "リップオタク"},
+          {korean : "립틴트" , japanese : "リップティント"},
+          {korean : "립밤" , japanese : "リップボーム"},
+          {korean : "립글로즈" , japanese : "リップグロス"}
+        ]
+
+  }
+
+
+// 食べ物
+var foodArray = {
+  "あ":[
+          {korean : "아침식사" , japanese : "朝ごはん"}
+        ],  
+    "か":[
+          {korean : "카페" , japanese : "化粧"},
+          {korean : "카페인테리어" , japanese : "化粧品"},
+          {korean : "카페투어", japanese : "化粧品グラム"},
+          {korean : "카페탐방", japanese : "化粧品ショッピング"},
+          {korean : "카페그램", japanese : "化粧品ブランド"},
+          {korean : "커피", japanese : "化粧品道具"},
+          {korean : "카페스타그램", japanese : "化粧品おすすめ"},
+          {korean : "카페라떼", japanese : "化粧品スタグラム"},
+          {korean : "카페디저트", japanese : "化粧方法"},
+          {korean : "카페추천", japanese : "コスメティック"},
+          {korean : "카페충", japanese : "コスメティックオタク"},
+          {korean : "오늘뭐먹지", japanese : "今日何食べようかな"}
+        ],
+     "た":[
+          {korean : "디저트" , japanese : "デザート"},
+          {korean : "존맛" , japanese : "超おいしい"},
+          {korean : "존맛탱" , japanese : "超超おいしい"},
+          {korean : "JMT" , japanese : "超超おいしい"},
+          {korean : "저녁식사" , japanese : "ディナー"},
+          {korean : "치즈핫도그" , japanese : "チーズハッドグ"},
+          {korean : "달고나커피" , japanese : "ダルゴナコーヒー"},
+          {korean : "치즈닭갈비" , japanese : "チーズタッカルビ"},
+          {korean : "타피오카" , japanese : "タピオカ"}
+        ],
+    "は":[
+          {korean : "빵스타그램" , japanese : "パンスタグラム"},
+          {korean : "빵순이" , japanese : "パン好きの女の子"},
+          {korean : "빵돌이" , japanese : "パン好きの男の子"},
+          {korean : "푸드스타그램" , japanese : "フードスタグラム"},
+          {korean : "혼밥" , japanese : "一人飯"},
+          {korean : "혼술" , japanese : "一人酒"},
+          {korean : "핫플레이스" , japanese : "ホットプレス"},
+          {korean : "핫플" , japanese : "ホットプレ"}
+         ],
+    "ま":[
+          {korean : "먹방" , japanese : "モッパン"},
+          {korean : "먹방그램" , japanese : "モッパングラム"},
+          {korean : "먹방로드" , japanese : "モッパンロード"},
+          {korean : "먹스타" , japanese : "モッスタ"},
+          {korean : "먹스타그램" , japanese : "モッスタグラム"},
+          {korean : "맛집" , japanese : "マッジプ(おいしいお店)"},
+          {korean : "맛집탐방" , japanese : "マッジプ(おいしいお店)めぐり"},
+          {korean : "맛집리스트" , japanese : "マッジプ(おいしいお店)リスト"},
+          {korean : "맛스타그램" , japanese : "マッスタグラム"},
+          {korean : "밥스타그램" , japanese : "飯スタグラム"},
+          {korean : "냠냠" , japanese : "モグモグ"},
+        ],
+    "ら":[
+          {korean : "점심" , japanese : "ランチ"},
+          {korean : "점심시간" , japanese : "ランチタイム"}
+        ],
+    "や":[
+          {korean : "야식" , japanese : "夜食"},
+          {korean : "야식스타그램" , japanese : "夜食スタグラム"},
+          {korean : "야식그램" , japanese : "夜食グラム"}
+        ]       
+  }  
+
+// 旅行
+var tripArray = {
+  "あ":[
+          {korean : "1박2일" , japanese : "一泊二日"},
+          {korean : "일박이일" , japanese : "一泊二日"},
+          {korean : "가을여행" , japanese : "秋旅"},
+          {korean : "어메니티" , japanese : "アメニティー"}
+        ],  
+    "か":[
+          {korean : "게스트하우스" , japanese : "ゲストハウス"},
+          {korean : "한국여행" , japanese : "韓国旅行"},
+          {korean : "해외여행", japanese : "海外旅行"},
+          {korean : "해외가족여행", japanese : "海外家族旅行"},
+          {korean : "가족여행", japanese : "家族旅行"},
+          {korean : "공항", japanese : "空港"},
+          {korean : "공항패션", japanese : "空港ファッション"}
+        ],
+    "な":[
+          {korean : "여름여행" , japanese : "夏旅"},
+          {korean : "일본" , japanese : "日本"},
+          {korean : "일본여행" , japanese : "日本旅行"},
+          {korean : "일본감성" , japanese : "日本感性"}
+         ],        
+    "は":[
+          {korean : "봄여행" , japanese : "春旅"},
+          {korean : "호텔" , japanese : "ホテル"},
+          {korean : "호텔조식" , japanese : "ホテル朝食"},
+          {korean : "호텔중식" , japanese : "ホテル昼食"},
+          {korean : "호텔석식" , japanese : "ホテル夕食"},
+          {korean : "호캉스" , japanese : "ホテルでバカンス"},
+          {korean : "핫플레이스" , japanese : "ホットプレス"},
+          {korean : "핫플" , japanese : "ホットプレ"},
+          {korean : "겨울여행" , japanese : "冬旅行"},
+          {korean : "혼여" , japanese : "一人旅"},
+         ],
+    "ら":[
+          {korean : "여행" , japanese : "旅行"},
+          {korean : "여행스타그램" , japanese : "旅行スタグラム"},
+          {korean : "여행에미치다" , japanese : "旅行にドはまり"},
+          {korean : "여행은언제나옳다" , japanese : "旅行はいつも正しい"},
+          {korean : "여행정보" , japanese : "旅行情報"},
+          {korean : "여행꿀팁" , japanese : "旅行お役立ちTIP"},
+          {korean : "여행중" , japanese : "旅行中"},
+          {korean : "여행준비" , japanese : "旅行準備"},
+          {korean : "여행일기" , japanese : "旅行日記"},
+          {korean : "여행기록" , japanese : "旅行記録"},
+          {korean : "여행이좋다" , japanese : "旅行が好き"},
+          {korean : "낭만" , japanese : "浪漫"}
+        ],
+    "や":[
+          {korean : "유럽" , japanese : "ヨーロッパ"},
+          {korean : "유럽여행" , japanese : "ヨーロッパ旅行"},
+          {korean : "유럽감성" , japanese : "ヨーロッパ感性"}
+        ]       
+  }  
+
+// 恋愛
+var loveArray = {
+  "あ":[
+          {korean : "사랑" , japanese : "愛"},
+          {korean : "사랑중" , japanese : "恋愛中"},
+          {korean : "사랑해" , japanese : "愛してる"},
+          {korean : "사랑그램" , japanese : "愛グラム"},
+          {korean : "사랑하자" , japanese : "愛しよう"},
+          {korean : "사랑스런" , japanese : "愛しい"},
+          {korean : "사랑둥이" , japanese : "愛しい子"},
+          {korean : "1주년" , japanese : "1周年"}
+        ],  
+    "か":[
+          {korean : "남자친구" , japanese : "彼氏"},
+          {korean : "남친" , japanese : "彼氏"},
+          {korean : "남친스타그램" , japanese : "彼氏スタグラム"},
+          {korean : "남친구함", japanese : "彼氏募集"},
+          {korean : "여자친구", japanese : "彼女"},
+          {korean : "여친스타그램", japanese : "彼女スタグラム"},
+          {korean : "여친", japanese : "彼女"},
+          {korean : "여친구함", japanese : "彼女募集"},
+          {korean : "커플", japanese : "カップル"},
+          {korean : "커플스냅", japanese : "カップルスナップ"},
+          {korean : "커플아이템", japanese : "カップルアイテム"},
+          {korean : "커플케이스", japanese : "カップルケース"},
+          {korean : "커플스타그램", japanese : "カップルスタグラム"},
+          {korean : "기념일", japanese : "記念日"},
+          {korean : "결혼", japanese : "結婚"},
+          {korean : "연인" , japanese : "恋人"}
+        ],
+    "た":[
+          {korean : "달링" , japanese : "ダーリング"},
+          {korean : "데이트" , japanese : "デート"},
+          {korean : "데이트룩" , japanese : "デートルック"}
+         ],        
+    "ら":[
+          {korean : "연애" , japanese : "恋愛"},
+          {korean : "연애중" , japanese : "恋愛中"},
+          {korean : "러브" , japanese : "ラブ"},
+          {korean : "러브러브" , japanese : "ラブラブ"},
+          {korean : "럽스타그램" , japanese : "ラブスタグラム"},
+          {korean : "럽스타" , japanese : "ラブスタ"}
+        ]      
+  }  
+
+// K-POP
+var kpopArray = {
+  "あ":[
+          {korean : "아이돌" , japanese : "アイドル"},
+          {korean : "원스" , japanese : "ONCE"},
+          {korean : "아미" , japanese : "ARMY"},
+          {korean : "악수회" , japanese : "握手会"}
+        ],  
+    "か":[
+          {korean : "케이팝" , japanese : "K-POP"},
+          {korean : "굿즈" , japanese : "グッズ"},
+          {korean : "콘서트" , japanese : "コンサート"},
+          {korean : "걸그룹" , japanese : "ガールズグループ"},
+          {korean : "멋져", japanese : "かっこういい"},
+          {korean : "귀여워", japanese : "かわいい"}
+        ],
+    "た":[
+          {korean : "댄스" , japanese : "ダンス"},
+          {korean : "댄스타그램" , japanese : "ダンスタグラム"},
+          {korean : "댄스영상" , japanese : "ダンス映像"},
+          {korean : "춤" , japanese : "ダンス"},
+          {korean : "춤스타그램" , japanese : "ダンスタグラム"},
+          {korean : "트와이스" , japanese : "TWICE"}
+         ],        
+    "は":[
+          {korean : "블랙핑크" , japanese : "BLACKPINK"},
+          {korean : "빅뱅" , japanese : "BIGBANG"},
+          {korean : "방탄소년단" , japanese : "BTS(防弾少年団)"},
+          {korean : "브이아이피" , japanese : "VIP"},
+          {korean : "블링크" , japanese : "BLINK"},
+          {korean : "안무" , japanese : "振付"},
+          {korean : "안무영상" , japanese : "振付動画"},
+          {korean : "팬" , japanese : "ファン"},
+          {korean : "팬미팅" , japanese : "ファンミーティング"}
+        ]      
+  }
+
+  var cartArray = [];
+
+  new ClipboardJS('.cart_copy');
+
+  $('a.card').on('click', function (e) {
+    e.preventDefault();
+    $('.hira-tab').empty();
+    $('.all-list').empty();
+    var content = $(e.currentTarget).data("content");
+
+    if (content == "like") {
+      createList(likeArray);
+    } else if (content == "follow") {
+      createList(followArray);
+    } else if (content == "fashion") {
+      createList(fashionwArray);
+    } else if (content == "beauty") {
+      createList(beautyArray);
+    } else if (content == "food") {
+      createList(foodArray);
+    } else if (content == "trip") {
+      createList(tripArray);
+    } else if (content == "love") {
+      createList(loveArray);
+    } else if (content == "kpop") {
+      createList(kpopArray);
+    }
+    
+    clickList();
+    $(".modal-tag").modal('show');
+
+  });
+
+  $('.tag-cart').on('click', function () {
+
+    for (var i = 0; i < cartArray.length; i++) {
+      $('#selected_tags').append(cartArray[i]);
+    }
+    //delCartItem();
+    $('.cart_btn').css("display", "flex");
+    $(".modal-cart").modal('show');
+  });
+
+  $('.cart_clear').on('click', function () {
+    $("#selected_tags").empty();
+    cartArray.length = 0;
+    $('.cart_num').text(cartArray.length);
+  });
+
+  $('.cart_copy').on('click', function () {
+    window.alert("クリップボードにコピーされました！");
+  });
+
+  function clickList() {
+    // $('.list-group-item').on('click', function (e) {
+    //   var tagName = "#" + $(e.currentTarget).data("korean") + " ";
+    // cartArray.push(tagName);
+    //   $('.add-notify').show(3000);
+    //   $('.cart_num').text(cartArray.length);
+    //   setTimeout("hideNotify()", 500);
+    // });
+    $('.hash_tags_list')
+// Tooltipの設定
+.tooltip({
+  title: '追加しました',
+  placement: 'right',
+  trigger: 'manual'
+})
+// Tooltip表示後の動作を設定
+.on('shown.bs.tooltip', function(){
+  setTimeout((function(){
+    $(this).tooltip('hide');
+  }).bind(this), 500);
+})
+// クリック時の動作を設定
+.on('click', function(e) {
+  var tagName = "#" + $(e.currentTarget).data("korean") + " ";
+  cartArray.push(tagName);
+  $('.cart_num').text(cartArray.length);
+  $(this).tooltip('show'); // Tooltipを表示する
+});
+  }
+
+  function hideNotify() {
+    $('.add-notify').hide(3000);
+  }
+
+  // function delCartItem() {
+  //   $('.del_cart_item').on('click', function (e) {
+  //     $(e.currentTarget).parent().remove();
+  //   })
+  // }
+
+  function replaceAll(str, beforeStr, afterStr) {
+    var reg = new RegExp(beforeStr, "g");
+    return str.replace(reg, afterStr);
+  }
+
+  function createList(array){
+    $('.hira-tab').append('<li class="nav-item"><a class="nav-link active hiragana" data-toggle="tab" role="tab" href="#" data-option="all">全体</a></li>');
+    for (let key in array) {
+      var eng = changeHira(key);
+      var tabList = '<li class="nav-item"><a class="nav-link hiragana" data-toggle="tab" role="tab"  data-option="'+eng+'" href="#">'+key+'</a></li>';
+      $('.hira-tab').append(tabList);
+      var tagList = '<div class="'+eng+' hash_tags"><div class="all hiragana">'+key+'</div><div class="list-group li_text">';
+      var value = array[key];
+
+      for(var i = 0; i<value.length; i++){
+        var korean = value[i].korean;
+        var japanese = value[i].japanese;
+        var aTag = '<a href="#" class="list-group-item list-group-item-action '+eng+' hash_tags hash_tags_list" data-korean="'+korean+'" data-japanese="'+japanese+'">'+japanese+' #'+korean+'</a>';
+        tagList = tagList + aTag;
+      }              
+      tagList = tagList + "</div></div>";              
+      $(".all-list").append(tagList);
+    }
+    hideShowTags();
+  }
+
+function changeHira(str){
+  var eng;
+
+  if(str=="あ"){
+    eng = "a";
+  }else if(str=="か"){
+    eng = "ka";
+  }else if(str=="さ"){
+    eng = "sa";
+  }else if(str=="た"){
+    eng = "ta";
+  }else if(str=="な"){
+    eng = "na";
+  }else if(str=="は"){
+    eng = "ha";
+  }else if(str=="ま"){
+    eng = "ma";
+  }else if(str=="や"){
+    eng = "ya";
+  }else if(str=="ら"){
+    eng = "ra";
+  }else if(str=="わ"){
+    eng = "wa";
+  }
+
+  return eng;
+}
+
+function hideShowTags(){
+  $("a.hiragana").on("click",function(event){
+    var option = $(event.currentTarget).data("option");
+    if(option == "all"){
+      $(".hash_tags").show();
+    }else {
+      $(".hash_tags").hide();
+      $("."+option).show();
+    }
+  })
+}
+</script>
+
+</html>
