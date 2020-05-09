@@ -31,252 +31,13 @@
   <script defer src="js/all.js"></script>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ead11ef2a3ebd6f"></script>
-  <style>
-    .md-pills .nav-link.active {
-      color: #fff;
-      background-color: #616161;
-    }
-
-    button.close {
-      position: absolute;
-      right: 0;
-      z-index: 2;
-      padding-right: 1rem;
-      padding-top: .6rem;
-    }
-
-    .card-img-top {
-      /* height: 20vw; */
-      opacity: 0.3;
-    }
-
-    .box {
-      position: relative;
-    }
-
-    /* 大デバイス（デスクトップ, 1200px 未満） */
-    @media (min-width: 992px) {
-      .text {
-        font-size: 7.0rem;
-      }
-
-      .card-text {
-        top: calc(50% - 7.0rem);
-        font-size: 7.0rem;
-      }
-
-      .tag_text {
-        font-size: 7.0rem;
-      }
-
-      .hiragana {
-        font-size: 3.0rem;
-      }
-
-      .tooltip-inner {
-        font-size: 2.0rem;
-      }
-
-      .all {
-        width: 4.4rem;
-      }
-
-      .hash_tags_list {
-        font-size: 3.0rem;
-      }
-    }
-
-    /* 中デバイス（タブレット, 992px 未満） */
-    @media (max-width: 991.98px) {
-      .text {
-        font-size: 6.0rem;
-      }
-
-      .card-text {
-        top: calc(50% - 4.4rem);
-        font-size: 4.4rem;
-      }
-
-      .tag_text {
-        font-size: 3.0rem;
-      }
-
-      .hiragana {
-        font-size: 2.0rem;
-      }
-
-      .tooltip-inner {
-        font-size: 1.5rem;
-      }
-
-      .all {
-        width: 3.4rem;
-      }
-
-      .li_text {
-        font-size: 2.0rem;
-      }
-
-      .hash_tags_list {
-        font-size: 2.0rem;
-      }
-
-      /* .container-fluid{
-        padding-right:0;
-      } */
-
-    }
-
-    /* 小デバイス（横向きモバイル, 768px 未満） */
-    @media (max-width: 767.98px) {
-      .text {
-        font-size: 5.0rem;
-      }
-
-      .card-text {
-        top: calc(50% - 3.0rem);
-        font-size: 3.0rem;
-      }
-
-      .tag_text {
-        font-size: 2.6rem;
-      }
-
-      .hiragana {
-        font-size: 1.6rem;
-      }
-
-      .tooltip-inner {
-        font-size: 1.0rem;
-      }
-
-      .hash_tags_list {
-        font-size: 1.5rem;
-      }
-
-      .all {
-        width: 3.0rem;
-      }
-    }
-
-    /* 極小デバイス（縦向きモバイル, 576px 未満） */
-    @media (max-width: 575.98px) {
-      .text {
-        font-size: 4.0rem;
-      }
-
-      .card-text {
-        top: calc(50% - 1.5rem);
-        font-size: 1.5rem;
-      }
-
-      .tag_text {
-        font-size: 1.3rem;
-      }
-
-      .hiragana {
-        font-size: 1.3rem;
-      }
-
-      .all {
-        width: 2.7rem;
-      }
-
-      .hash_tags_list {
-        font-size: 1.0rem;
-      }
-    }
-
-    .text {
-      font-family: 'Montserrat', sans-serif;
-      margin-top: 5%;
-    }
-
-    .li_text {
-      font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
-    }
-
-    .box div.card-text {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      font-weight: bold;
-      /* font-family: 'M PLUS Rounded 1c', sans-serif; */
-      font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
-      text-align: center;
-      color: black;
-
-    }
-
-    .tag-cart {
-      position: sticky;
-      /* margin-left: 70%; */
-      float: right;
-      margin-right: 5%;
-      bottom: 1%;
-    }
-
-    .all {
-      /* border: solid 3px; */
-      /*線*/
-      border-radius: 10px;
-      /*角の丸み*/
-      font-weight: bold;
-      margin-top: 1%;
-      background: #FFF;
-      text-align: center;
-    }
-
-    ul.hira_ul,
-    ol {
-      background: #fcfcfc;
-      /*背景色*/
-      /* padding: 0.5em 0.5em 0.5em 2em; */
-      /*ボックス内の余白*/
-      /* border: solid 3px gray; */
-      /*線の種類 太さ 色*/
-      /* font-family: 'M PLUS Rounded 1c', sans-serif; */
-    }
-
-    ul li.hira_li,
-    ol li {
-      line-height: 1.5;
-      /*文の行高*/
-      /* padding: 0.5em 0; */
-      /*前後の文との余白*/
-    }
-
-    .col-md-6 {
-      padding-left: 3%;
-    }
-
-    .list-group-item {
-      border-top: 0;
-      border-left: 0;
-      border-bottom: solid 1px;
-      border-right: 0;
-      padding-bottom: 0px
-    }
-
-    .col-6 {
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 1%;
-      padding-right: 1%;
-    }
-
-    /* .x-btn {
-      font-size:3.0rem;
-    } */
-  </style>
-
 
 </head>
 
 
 <body>
   <div class="container-fluid">
-    <table border="0" cellpadding="0" cellspacing="0">
+    <!-- <table border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td>
           <p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p>
@@ -305,10 +66,7 @@
           </div>
         </td>
       </tr>
-    </table>
-    <!-- Section
-    <section> -->
-
+    </table> -->
 
     <!-- Tag List Modal -->
     <div class="modal modal-tag fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -356,7 +114,7 @@
     <hr class="w-header my-4">
     <!-- <p class="text lead text-center text-muted pt-2 mb-5">You can find several korean tags in this section.</p> -->
     <div style="display:flex;text-align: center;margin-bottom:3%;">
-      <input type="text" style="width:100%;" placeholder="Search.." name="search"><button type="button"
+      <input type="text" style="width:100%;" placeholder="Search text (Korean or Japanese)" name="search"><button type="button"
         id="search-btn"><i class="fa fa-search"></i></button>
     </div>
     <!--First row-->
@@ -464,15 +222,17 @@
          font-size: large;"><span class="cart_num">0</span></div>
       <i class="fas fa-shopping-cart fa-3x"></i>
     </div>
-    <div style="font-size:1.3rem;margin-left:2.5%;">追加要望&問い合わせ /Contact me <br><a
+    <div style="font-size:1.3rem;margin-left:2%;">追加要望&問い合わせ /Contact me <br><a
         href="mailto:goodki283@gmail.com">goodki283@gmail.com</a></div>
-    <div style="font-size:1.3rem;margin-left:2.5%;margin-top:3%;">他の人に共有</div>
+    <div style="font-size:1.3rem;margin-left:2%;margin-top:3%;">
+      <div>他の人に共有</div>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="addthis_inline_share_toolbox_sfd2"></div>
+    </div>
   </div>
 
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <div class="addthis_inline_share_toolbox_sfd2"></div>
 
-  <table border="0" cellpadding="0" cellspacing="0">
+  <table border="0" cellpadding="0" cellspacing="0" style="margin-left:2%;">
     <tr>
       <td>
         <p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p>
@@ -536,7 +296,8 @@
       { korean: "좋튀", japanese: "いいねダッシュ" },
       { korean: "좋튀반사", japanese: "いいねダッシュ反射" },
       { korean: "좋아요꾸욱", japanese: "いいねぎゅっ" },
-      { korean: "좋아요꾹꾹", japanese: "いいねぎゅっぎゅっ" }
+      { korean: "좋아요꾹꾹", japanese: "いいねぎゅっぎゅっ" },
+      { korean: "인스타데일리", japanese: "インスタデイリー" }
     ],
     "か": [
       { korean: "소통", japanese: "コミュニケーション" },
@@ -556,7 +317,8 @@
       { korean: "소통인친", japanese: "コミュニケーションインスタフレンド" },
       { korean: "소통그램", japanese: "コミュニケーショングラム" },
       { korean: "소통댓글", japanese: "コミュニケーションコメント" },
-      { korean: "소통할까요", japanese: "コミュニケーションしましょうか" }
+      { korean: "소통할까요", japanese: "コミュニケーションしましょうか" },
+      { korean: "오늘", japanese: "今日" }
     ],
     "さ": [
       { korean: "셀카", japanese: "セルフィー" },
@@ -577,7 +339,8 @@
       { korean: "셀카사진", japanese: "セルフィー写真" },
       { korean: "셀카스타", japanese: "セルフィースタ" },
       { korean: "셀카포즈", japanese: "セルフィーポーズ" },
-      { korean: "셀카사기꾼", japanese: "セルフィー詐欺師" }
+      { korean: "셀카사기꾼", japanese: "セルフィー詐欺師" },
+      { korean: "셀스타그램", japanese: "セルスタグラム" }
     ],
     "た": [
       { korean: "퇴근", japanese: "退勤" },
@@ -596,7 +359,13 @@
       { korean: "퇴근후취미", japanese: "退勤後趣味" },
       { korean: "퇴근시켜줘", japanese: "退勤させてくれ" },
       { korean: "퇴근하자", japanese: "退勤しよう" },
-      { korean: "퇴근이다", japanese: "退勤だ" }
+      { korean: "퇴근이다", japanese: "退勤だ" },
+      { korean: "데일리", japanese: "デイリー" },
+      { korean: "데일리운동", japanese: "デイリー運動" },
+      { korean: "데일리셀카", japanese: "デイリーセルフィー" },
+      { korean: "데일리그램", japanese: "デイリーグラム" },
+      { korean: "데일리스타그램", japanese: "デイリースタグラム" },
+      { korean: "데일리포트", japanese: "デイリーレポート" }
     ],
     "な": [
       { korean: "일상", japanese: "日常" },
@@ -624,8 +393,8 @@
       { korean: "일상블로그", japanese: "日常ブログ" },
       { korean: "일상스타그램데일리", japanese: "日常スタグラムdaily" },
       { korean: "일상만화", japanese: "日常漫画" },
-      { korean: "일상한복", japanese: "日常韓馥" },
-      { korean: "일상애한복", japanese: "日常に韓馥" },
+      { korean: "일상한복", japanese: "日常韓服" },
+      { korean: "일상애한복", japanese: "日常に韓服" },
       { korean: "일상샷", japanese: "日常ショット" },
       { korean: "일상생활", japanese: "日常生活" },
       { korean: "일상드로잉", japanese: "日常ドローイング" },
@@ -634,12 +403,37 @@
       { korean: "일상으로", japanese: "日常に" },
       { korean: "일상복귀", japanese: "日常復帰" },
       { korean: "일상시작", japanese: "日常スタート" },
-      { korean: "일상사진가", japanese: "日常フォトグラファー" }
+      { korean: "일상사진가", japanese: "日常フォトグラファー" },
+      { korean: "일기", japanese: "日記" },
+      { korean: "일과", japanese: "日課" }
     ]
   }
 
   // フォロー
   var followArray = {
+    "あ": [
+      { korean: "인친", japanese: "インチン(インスタ友達)" },
+      { korean: "인친환영", japanese: "インチン歓迎" },
+      { korean: "인친님", japanese: "インチン様" },
+      { korean: "인친그램", japanese: "インチングラム" },
+      { korean: "인친해요", japanese: "インチンしよう" },
+      { korean: "인친들", japanese: "インチンたち" },
+      { korean: "인친구함", japanese: "インチン募集" },
+      { korean: "인친소통", japanese: "インチンコミュニケーション" },
+      { korean: "인친스타그램", japanese: "インチンスタグラム" },
+      { korean: "인친좋아요", japanese: "インチンいいね" },
+      { korean: "인친맺어요", japanese: "インチンになろう" },
+      { korean: "인친님들", japanese: "インチン様たち" },
+      { korean: "인친하자", japanese: "インチンしよう" },
+      { korean: "인친늘리기", japanese: "インチン増やし" },
+      { korean: "인친할사람", japanese: "インチンする人" },
+      { korean: "인친해용", japanese: "インチンしよん" },
+      { korean: "인친맞팔", japanese: "インチン相互フォロー" },
+      { korean: "인친해요우리", japanese: "インチンしよう私たち" },
+      { korean: "인친댓글", japanese: "インチンコメント" },
+      { korean: "인친환영해요", japanese: "インチン歓迎します" },
+      { korean: "인친소", japanese: "インチンを紹介します" }
+    ], 
     "さ": [
       { korean: "맞팔", japanese: "相互フォロー" },
       { korean: "맞팔환영", japanese: "相互フォロー歓迎" },
@@ -655,16 +449,61 @@
       { korean: "맞팔좋아요", japanese: "相互フォローいいね" },
       { korean: "맞팔반사", japanese: "相互フォロー反射" },
       { korean: "맞팔대환영", japanese: "相互フォロー大歓迎" },
-      { korean: "맞팔소통", japanese: "相互フォローコミュニケーション" }
+      { korean: "맞팔소통", japanese: "相互フォローコミュニケーション" },
+      { korean: "맞좋", japanese: "相(互フォロー)い(いね)" },
+      { korean: "맞팔은댓", japanese: "相互フォローはコメント" },
+      { korean: "맞팔하면선팔", japanese: "相互フォローすれば先フォロー" },
+      { korean: "맞팔로우", japanese: "相互フォロー" },
+      { korean: "맞팔스타그램", japanese: "相互フォロースタグラム" },
+      { korean: "맞팔가요", japanese: "相互フォロー行きましょう" }
     ],
+    "た": [
+      { korean: "친구해요", japanese: "友達になろう" },
+      { korean: "친구", japanese: "友達" },
+      { korean: "친구스타그램", japanese: "友達スタグラム" },
+      { korean: "친구랑", japanese: "友達と" },
+      { korean: "친구구함", japanese: "友達募集中" },
+      { korean: "친구소환", japanese: "友達召喚" },
+      { korean: "친구하자", japanese: "友達しよう" },
+      { korean: "친구그램", japanese: "友達グラム" },
+      { korean: "친구추가", japanese: "友達追加" },
+      { korean: "친구만들기", japanese: "友達作り" },
+      { korean: "친구친구", japanese: "友達友達" },
+      { korean: "친구가최고", japanese: "友達が最高" },
+      { korean: "친구환영", japanese: "友達歓迎" },
+      { korean: "친구와함께", japanese: "友達と一緒に" },
+      { korean: "친구추천", japanese: "友達推薦" },
+      { korean: "친구태그", japanese: "友達タグ" },
+      { korean: "친구가", japanese: "友達が" },
+      { korean: "친구야고마워", japanese: "友達に感謝" },
+      { korean: "친구샷", japanese: "友達ショット" },
+      { korean: "친구찬스", japanese: "友達チャンス" },
+      { korean: "친구만나기", japanese: "友達と会う" }
+    ], 
     "は": [
       { korean: "팔로우", japanese: "フォロー" },
       { korean: "팔로우해요", japanese: "フォローしよう" },
       { korean: "팔로우환영", japanese: "フォロー歓迎" },
       { korean: "팔로우백", japanese: "フォローバック" },
       { korean: "팔로우미", japanese: "フォローミー" },
-      { korean: "팔로어", japanese: "フォロワー" },
+      { korean: "팔로워", japanese: "フォロワー" },
       { korean: "팔로잉", japanese: "フォローイング" },
+      { korean: "팔로우이벤트", japanese: "フォローイベント" },
+      { korean: "팔로우그램", japanese: "フォローグラム" },
+      { korean: "팔로우늘리기", japanese: "フォロー増やし" },
+      { korean: "팔로우100", japanese: "フォロー100" },
+      { korean: "팔로잉그램", japanese: "フォローインググラム" },
+      { korean: "팔로우늘리는법", japanese: "フォロー増やす方法" },
+      { korean: "팔로팔로미", japanese: "フォローフォローミー" },
+      { korean: "팔로미", japanese: "フォロミー" },
+      { korean: "팔로우테러", japanese: "フォローテロ" },
+      { korean: "팔로우좋아요", japanese: "フォローいいね" },
+      { korean: "팔로우하면맞팔", japanese: "フォローすると相互フォロー" },
+      { korean: "팔로우반사", japanese: "フォロー反射" },
+      { korean: "팔로우해주세요", japanese: "フォローしてください" },
+      { korean: "팔로윙", japanese: "フォローウィング" },
+      { korean: "팔로미팔로미", japanese: "フォローミーフォローミー" },
+      { korean: "팔로우하기", japanese: "フォローする" },
       { korean: "선팔하면맞팔", japanese: "フォロー返します" },
       { korean: "팔로잉", japanese: "フォローイング" }
     ]
@@ -673,6 +512,25 @@
 
   // ファッション
   var fashionwArray = {
+    "あ": [
+      { korean: "악세사리", japanese: "アクセサリー" },
+      { korean: "악세사리쇼핑몰", japanese: "アクセサリーショッピングモール" },
+      { korean: "악세사리그램", japanese: "アクセサリーグラム" },
+      { korean: "악세사리코디", japanese: "アクセサリーコーデ" },
+      { korean: "악세사리가게", japanese: "アクセサリー屋" },
+      { korean: "원피스", japanese: "ワンピース" },
+      { korean: "원피스코디", japanese: "ワンピースコーデ" },
+      { korean: "원피스수영복", japanese: "ワンピース水着" },
+      { korean: "원피스룩", japanese: "ワンピースルック" },
+      { korean: "원피스그램", japanese: "ワンピースグラム" },
+      { korean: "원피스덕후", japanese: "ワンピースオタク" },
+      { korean: "원피스코디추천", japanese: "ワンピースコーデ推薦" },
+      { korean: "귀걸이", japanese: "イアリング" },
+      { korean: "귀걸이추천", japanese: "イアリング推薦" },
+      { korean: "귀걸이그램", japanese: "イアリンググラム" },
+      { korean: "귀걸이자랑", japanese: "イアリング自慢" },
+      { korean: "귀걸이코디", japanese: "イアリングコーデ" }
+    ],
     "か": [
       { korean: "코디", japanese: "コーデ" },
       { korean: "코디스타그램", japanese: "コーデスタグラム" },
@@ -681,43 +539,112 @@
       { korean: "코디북", japanese: "コーデブック" },
       { korean: "코디그램", japanese: "コーデグラム" },
       { korean: "코디세트", japanese: "コーデセット" },
+      { korean: "코디룩", japanese: "コーデルック" },
+      { korean: "코디컷", japanese: "コーデカット" },
+      { korean: "코디법", japanese: "コーデ方法" },
+      { korean: "코디네이트", japanese: "コーディネート" },
       { korean: "코디룩추천", japanese: "コーデルックおすすめ" },
+      { korean: "코디제안", japanese: "コーデ提案" },
+      { korean: "코디모음", japanese: "コーデ集" },
+      { korean: "코디네이션", japanese: "コーディネーション" },
+      { korean: "코디아이템", japanese: "コーデアイテム" },
+      { korean: "커플코디", japanese: "カップルコーデ" },
+      { korean: "커플룩", japanese: "カップルルック、ペアールック" },
+      { korean: "커플옷", japanese: "カップル服" },
       { korean: "오늘의코디", japanese: "今日のコーデ" },
       { korean: "오오티디", japanese: "今日のコーデ(ootd,outfit of the day)" },
       { korean: "학생코디", japanese: "学生コーデ" },
       { korean: "연예인패션", japanese: "芸能人ファッション" },
-    ],
-    "た": [
-      { korean: "남자코디", japanese: "男子コーデ" },
-      { korean: "남자옷", japanese: "男子服" },
-      { korean: "남자옷코디", japanese: "男子服コーデ" },
-      { korean: "남자데일리룩", japanese: "男子デイリールック" },
-      { korean: "남친룩코디", japanese: "彼氏ルックスコーデ" },
-      { korean: "여친룩코디", japanese: "彼女ルックスコーデ" },
-      { korean: "남성패션", japanese: "男性ファッション" },
-      { korean: "남자패션", japanese: "男子ファッション" },
-      { korean: "데일리룩", japanese: "デイリールック" },
-      { korean: "데일리코디", japanese: "デイリーコーデ" },
-      { korean: "데일리룩코디", japanese: "デイリールックコーデ" },
-      { korean: "데일리패션", japanese: "デイリーファッション" },
-      { korean: "대학생코디", japanese: "大学生コーデ" },
-      { korean: "데이트코디", japanese: "デートコーデ" }
+      { korean: "연예인옷", japanese: "芸能人服" },
+      { korean: "연예인코디", japanese: "芸能人コーデ" },
+      { korean: "한국옷", japanese: "韓国服" } 
     ],
     "さ": [
       { korean: "여자코디", japanese: "女子コーデ" },
       { korean: "여자옷", japanese: "女子服" },
+      { korean: "여자모델", japanese: "女子モデル" },
+      { korean: "여자쇼핑몰", japanese: "女子ショッピングモール" },
+      { korean: "여자정장", japanese: "女子スーツ" },
+      { korean: "여자속옷", japanese: "女子下着" },
+      { korean: "여자가방", japanese: "女子カバン" },
+      { korean: "여자신발", japanese: "女子シューズ" },
+      { korean: "여자청바지", japanese: "女子ジーンズ" },
+      { korean: "여자니트", japanese: "女子ニート" },
+      { korean: "여자안경", japanese: "女子眼鏡" },
+      { korean: "여자지갑", japanese: "女子財布" },
+      { korean: "여자패션코디", japanese: "女子ファッションコーデ" },
       { korean: "여자옷코디", japanese: "女子服コーデ" },
       { korean: "여고생코디", japanese: "女子高生コーデ" },
       { korean: "여대생코디", japanese: "女子大学生コーデ" },
       { korean: "여자데일리룩", japanese: "女子デイリールック" },
       { korean: "여성패션", japanese: "女性ファッション" },
       { korean: "여자패션", japanese: "女子ファッション" },
-      { korean: "여자쇼핑몰", japanese: "女子ショッピングモール" }
+      { korean: "여자쇼핑몰", japanese: "女子ショッピングモール" },
+      { korean: "치마", japanese: "スカート" },
+      { korean: "치마바지", japanese: "スカートズボン" },
+      { korean: "치마코디", japanese: "スカートコーデ" }
+    ],
+    "た": [
+      { korean: "남자코디", japanese: "男子コーデ" },
+      { korean: "남자코디추천", japanese: "男子コーデ推薦" },
+      { korean: "남자옷", japanese: "男子服" },
+      { korean: "남자옷코디", japanese: "男子服コーデ" },
+      { korean: "남자코디룩", japanese: "男子コーデルック" },
+      { korean: "남자청바지", japanese: "男子ジーンズ" },
+      { korean: "남자정장", japanese: "男子スーツ" },
+      { korean: "남자셔츠", japanese: "男子シャツ" },
+      { korean: "남자바지", japanese: "男子ズボン" },
+      { korean: "남자신발", japanese: "男子シューズ" },
+      { korean: "남자운동화", japanese: "男子運動靴" },
+      { korean: "남자시계", japanese: "男子腕時計" },
+      { korean: "남자악세사리", japanese: "男子アクセサリー" },
+      { korean: "남자여름코디", japanese: "男子夏コーデ" },
+      { korean: "남자데일리룩", japanese: "男子デイリールック" },
+      { korean: "남친룩코디", japanese: "彼氏ルックスコーデ" },
+      { korean: "여친룩코디", japanese: "彼女ルックスコーデ" },
+      { korean: "남성패션", japanese: "男性ファッション" },
+      { korean: "남자패션", japanese: "男子ファッション" },
+      { korean: "남자패션코디", japanese: "男子ファッションコーデ" },
+      { korean: "남자모델", japanese: "男子モデル" },
+      { korean: "치마저고리", japanese: "チマチョゴリ" },
+      { korean: "데일리룩", japanese: "デイリールック" },
+      { korean: "데일리룩추천", japanese: "デイリールック推薦" },
+      { korean: "데일리코디", japanese: "デイリーコーデ" },
+      { korean: "데일리룩코디", japanese: "デイリールックコーデ" },
+      { korean: "데일리패션", japanese: "デイリーファッション" },
+      { korean: "데일리가방", japanese: "デイリーかばん" },
+      { korean: "데일리슈즈", japanese: "デイリーシューズ" },
+      { korean: "데일리백", japanese: "デイリーバック" },
+      { korean: "데일리원피스", japanese: "デイリーワンピース" },
+      { korean: "데일리렌즈", japanese: "デイリーレンズ" },
+      { korean: "데일리스타일", japanese: "デイリースタイル" },
+      { korean: "데일리핏", japanese: "デイリーフィット" },
+      { korean: "데일리목걸이", japanese: "デイリーネックレス" },
+      { korean: "데일리악세사리", japanese: "デイリーアクセサリー" },
+      { korean: "데일리신발", japanese: "デイリー靴" },
+      { korean: "데일리자켓", japanese: "デイリージャケット" },
+      { korean: "데일리샷", japanese: "デイリーショット" },
+      { korean: "데일리원피스", japanese: "デイリーワンピース" },
+      { korean: "데일리니트", japanese: "デイリーショット" },
+      { korean: "대학생코디", japanese: "大学生コーデ" },
+      { korean: "데이트코디", japanese: "デートコーデ" },
+      { korean: "맨투맨", japanese: "トレーナー" },
+      { korean: "맨투맨코디", japanese: "トレーナーコーデ" }
     ],
     "は": [
       { korean: "옷", japanese: "服" },
       { korean: "옷스타그램", japanese: "服スタグラム" },
-      { korean: "패션", japanese: "ファッション" },
+      { korean: "옷가게", japanese: "服屋" },
+      { korean: "옷코디", japanese: "服コーデ" },
+      { korean: "옷스타그램일상", japanese: "服スタグラム日常" },
+      { korean: "옷스타", japanese: "服スタ" },
+      { korean: "옷그램", japanese: "服グラム" },
+      { korean: "옷잘입는남자", japanese: "着こなしがいい男" },
+      { korean: "옷추천", japanese: "服推薦" },
+      { korean: "옷스타일", japanese: "服スタイル" },
+      { korean: "봄옷", japanese: "春服" },
+      { korean: "블라우스", japanese: "ブラウス" },
+      { korean: "블라우스코디", japanese: "ブラウスコーデ" },
       { korean: "패션스타그램", japanese: "ファッションスタグラム" },
       { korean: "패션피플", japanese: "ファッションピープル" },
       { korean: "패피", japanese: "ファッピー(ファッションピープル)" },
@@ -732,9 +659,7 @@
       { korean: "패션아이템", japanese: "ファッションアイテム" },
       { korean: "패션스타일", japanese: "ファッションスタイル" }
     ]
-
   }
-
 
   // ビューティー
   var beautyArray = {
@@ -760,7 +685,8 @@
       { korean: "데일리화장", japanese: "デイリー化粧" },
       { korean: "데일리화장품", japanese: "デイリー化粧品" },
       { korean: "데일리메이크업", japanese: "デイリーメイクアップ" },
-      { korean: "오늘의화장품", japanese: "今日の化粧品" }
+      { korean: "오늘의화장품", japanese: "今日の化粧品" },
+      { korean: "다이어트", japanese: "ダイエット" },
     ],
     "さ": [
       { korean: "인생템", japanese: "人生アイテム" }
@@ -1174,14 +1100,9 @@
 
 
     for (let key in array) {
-      // var eng = changeHira(key);
-      // var tabList = '<li class="nav-item"><a class="nav-link hiragana" data-toggle="tab" role="tab"  data-option="'+eng+'" href="javascript:void(0);">'+key+'</a></li>';
-      // $('.hira-tab').append(tabList);
-      // var tagList = '<div class="'+eng+' hash_tags"><div class="all hiragana">'+key+'</div><div class="list-group li_text">';
       var value = array[key];
-
       value.filter(e => {
-        if (e["japanese"].indexOf(text) != -1) {
+        if (e["japanese"].indexOf(text) != -1 || e["korean"].indexOf(text) != -1) {
           // values に値が存在しない要素のみをフィルタリング
           resultArray.push(e);
         }

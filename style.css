@@ -1,0 +1,233 @@
+.md-pills .nav-link.active {
+    color: #fff;
+    background-color: #616161;
+  }
+
+  button.close {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    padding-right: 1rem;
+    padding-top: .6rem;
+  }
+
+  .card-img-top {
+    /* height: 20vw; */
+    opacity: 0.3;
+  }
+
+  .box {
+    position: relative;
+  }
+
+  /* 大デバイス（デスクトップ, 1200px 未満） */
+  @media (min-width: 992px) {
+    .text {
+      font-size: 7.0rem;
+    }
+
+    .card-text {
+      top: calc(50% - 7.0rem);
+      font-size: 7.0rem;
+    }
+
+    .tag_text {
+      font-size: 7.0rem;
+    }
+
+    .hiragana {
+      font-size: 3.0rem;
+    }
+
+    .tooltip-inner {
+      font-size: 2.0rem;
+    }
+
+    .all {
+      width: 4.4rem;
+    }
+
+    .hash_tags_list {
+      font-size: 3.0rem;
+    }
+  }
+
+  /* 中デバイス（タブレット, 992px 未満） */
+  @media (max-width: 991.98px) {
+    .text {
+      font-size: 6.0rem;
+    }
+
+    .card-text {
+      top: calc(50% - 4.4rem);
+      font-size: 4.4rem;
+    }
+
+    .tag_text {
+      font-size: 3.0rem;
+    }
+
+    .hiragana {
+      font-size: 2.0rem;
+    }
+
+    .tooltip-inner {
+      font-size: 1.5rem;
+    }
+
+    .all {
+      width: 3.4rem;
+    }
+
+    .li_text {
+      font-size: 2.0rem;
+    }
+
+    .hash_tags_list {
+      font-size: 2.0rem;
+    }
+
+    /* .container-fluid{
+      padding-right:0;
+    } */
+
+  }
+
+  /* 小デバイス（横向きモバイル, 768px 未満） */
+  @media (max-width: 767.98px) {
+    .text {
+      font-size: 5.0rem;
+    }
+
+    .card-text {
+      top: calc(50% - 3.0rem);
+      font-size: 3.0rem;
+    }
+
+    .tag_text {
+      font-size: 2.6rem;
+    }
+
+    .hiragana {
+      font-size: 1.6rem;
+    }
+
+    .tooltip-inner {
+      font-size: 1.0rem;
+    }
+
+    .hash_tags_list {
+      font-size: 1.5rem;
+    }
+
+    .all {
+      width: 3.0rem;
+    }
+  }
+
+  /* 極小デバイス（縦向きモバイル, 576px 未満） */
+  @media (max-width: 575.98px) {
+    .text {
+      font-size: 4.0rem;
+    }
+
+    .card-text {
+      top: calc(50% - 1.5rem);
+      font-size: 1.5rem;
+    }
+
+    .tag_text {
+      font-size: 1.3rem;
+    }
+
+    .hiragana {
+      font-size: 1.3rem;
+    }
+
+    .all {
+      width: 2.7rem;
+    }
+
+    .hash_tags_list {
+      font-size: 1.0rem;
+    }
+  }
+
+  .text {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5%;
+  }
+
+  .li_text {
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  }
+
+  .box div.card-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-weight: bold;
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+    text-align: center;
+    color: black;
+
+  }
+
+  .tag-cart {
+    position: sticky;
+    /* margin-left: 70%; */
+    float: right;
+    margin-right: 5%;
+    bottom: 1%;
+  }
+
+  .all {
+    /* border: solid 3px; */
+    /*線*/
+    border-radius: 10px;
+    /*角の丸み*/
+    font-weight: bold;
+    margin-top: 1%;
+    background: #FFF;
+    text-align: center;
+  }
+
+  ul.hira_ul,
+  ol {
+    background: #fcfcfc;
+    /*背景色*/
+    /* padding: 0.5em 0.5em 0.5em 2em; */
+    /*ボックス内の余白*/
+    /* border: solid 3px gray; */
+    /*線の種類 太さ 色*/
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+  }
+
+  ul li.hira_li,
+  ol li {
+    line-height: 1.5;
+    /*文の行高*/
+    /* padding: 0.5em 0; */
+    /*前後の文との余白*/
+  }
+
+  .col-md-6 {
+    padding-left: 3%;
+  }
+
+  .list-group-item {
+    border-top: 0;
+    border-left: 0;
+    border-bottom: solid 1px;
+    border-right: 0;
+    padding-bottom: 0px
+  }
+
+  .col-6 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
